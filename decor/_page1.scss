@@ -1,0 +1,66 @@
+@import "shortcuts";
+@import "colorpalette";
+
+header{
+    height: 12vh;
+    width: 100vw;
+    @include center-content($jc-item: space-between);
+    .logo{
+        padding-left: 5rem;
+    }
+    .navlinks{
+        padding-right: 4rem;
+        @include center-content;
+        >a{
+            color: black;
+            padding-right: 2rem;
+            &:not(:last-child){
+                height: 2rem;
+                width: 5rem;
+                @include navbaranimategrey;
+            }
+        }
+        .signup{
+            @include center-content;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            height: 2rem;
+            width: 6rem;
+            background-color: $electricblue;
+            border-radius: 10px;
+            @include navbaranimateblue;
+        }
+    }
+}
+.homepage{
+    position: relative;
+    height: 80vh;
+    @include center-content;
+    .hometext{
+        width: 45vw;
+        padding-left: 15vw;
+        padding-top: 3vh;
+        position: relative;
+    }
+    .openinglink{
+        font-size: 1.5rem;
+        @include center-content;
+        color: black;
+        margin-left: 15vw;
+        margin-top: 5%;
+        width: 15rem;
+        height: 3.75rem;
+        @include navbaranimateblue;
+    }
+    .page1pic{
+        height: 90vh;
+    }
+}
+footer{
+    height: 8vh;
+    @include center-content($jc-item: flex-end);
+    .contact{
+        padding-right: 5vw;
+        padding-bottom: 8vh;
+    }
+}

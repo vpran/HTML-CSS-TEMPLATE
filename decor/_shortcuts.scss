@@ -1,0 +1,47 @@
+@import "colorpalette";
+
+@mixin center-content(
+    $jc-item: center,
+    $alignitems: center,
+) {
+    display: flex;
+    justify-content: $jc-item;
+    align-items: $alignitems;
+}
+@mixin navbaranimategrey {
+    transition: 0.2s ease;
+    &:hover{
+        text-shadow: 2px 2px 2px $darkgrey;
+    }
+}
+@mixin animatelogo{
+    transition: 0.1s linear;
+    &:hover{
+        transform: translateZ(0.5px) scale(1.05);
+        color: $lightpurple;
+        text-shadow: 1px 1px 2px $darkgrey;
+    }
+}
+@mixin navbaranimateblue{
+    background: linear-gradient(to right, $electricblue 50%, $lightpurple 50%);
+    background-size: 200% 100%;
+    background-position: left bottom;
+    border-radius: 10px;
+    transition: all 0.8s ease;
+    &:hover{
+        background-position: right bottom;
+    }
+}
+
+
+@mixin grid-templating(
+    $gcs: 1,
+    $gce: 2,
+    $grs: 3,
+    $gre: 4,
+){
+    grid-column-start: $gcs;
+    grid-column-end: $gce;
+    grid-row-start: $grs;
+    grid-row-end: $gre;
+}

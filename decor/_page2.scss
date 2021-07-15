@@ -1,0 +1,79 @@
+@import "colorpalette";
+@import "shortcuts";
+.page2{
+    height: 100vh;
+    background-color: $lightgrey;
+    display: grid;
+    grid-template-columns: repeat(3, 25vw);
+    grid-template-rows: 10vh 45vh 45vh;
+    justify-content: center;
+    align-items: center;
+    .lefttitle{
+        font-size: 150%;
+        padding-left: 6vw;
+        @include center-content($jc-item: flex-start);
+        @include grid-templating($gcs: 1, $gce: 4, $grs: 1, $gre: 2);
+    }
+    .content{
+        @include center-content($jc-item: flex-start);
+        flex-direction: column;
+        padding-top: 2vh;
+        margin: auto;
+        width: 20vw;
+        height: 40vh;
+        background-color: $lightpurple;
+        border-radius: 10px;
+        transition: 0.4s ease;
+        p{
+            width: 15vw;
+            height: 15vh;
+            text-align: center;
+            font-size: 75%;
+        }
+        &:hover{
+            box-shadow: 10px 25px 50px rgba(0, 0, 0, 0.5);
+            transform: translateZ(1px) scale(1.1);
+        }
+    }
+    .content--1{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .content--2{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .content--3{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .content--4{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    .content--5{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    .content--6{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    .gridimages{
+        width: 13vw;
+        height: 13vh;
+        object-fit: contain;
+    }
+}

@@ -1,0 +1,31 @@
+@import "shortcuts";
+@import "colorpalette";
+
+.page3{
+    height: 100vh;
+    width: 100vw;
+    .testitle{
+        padding-top: 15vh;
+        @include center-content;
+        position: relative;
+        vertical-align: middle;
+        &::before, &::after{
+            content: '';
+            box-sizing: inherit;
+            position: absolute;
+        }
+        h1{
+            @include center-content;
+            width: 8em;
+            height: 2em;
+            transition: 0.25s linear;
+            border: 2px transparent;
+            &:hover{
+                border-top-color: $electricblue;
+            }
+        }
+    }
+    .testicards{
+
+    }
+}
