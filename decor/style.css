@@ -276,6 +276,7 @@ footer .contact {
   border-radius: 50%;
   height: 4em;
   width: 4em;
+  min-width: 4em;
 }
 .page3 .testicards .card .person .name {
   margin-left: 2vw;
