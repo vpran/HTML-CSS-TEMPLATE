@@ -7,25 +7,59 @@
     .testitle{
         padding-top: 15vh;
         @include center-content;
-        position: relative;
-        vertical-align: middle;
-        &::before, &::after{
-            content: '';
-            box-sizing: inherit;
-            position: absolute;
-        }
         h1{
             @include center-content;
             width: 8em;
             height: 2em;
-            transition: 0.25s linear;
-            border: 2px transparent;
-            &:hover{
-                border-top-color: $electricblue;
-            }
         }
     }
     .testicards{
-
+        overflow-x: auto;
+        width: 99vw;
+        scroll-snap-type: x mandatory;
+        @include center-content($jc-item: space-between);
+        flex-wrap: nowrap;
+        gap: 5vw;
+        scrollbar-color: $electricblue $lightpurple;
+        .card{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            scroll-snap-align: center;
+            min-width: 60vw;
+            height: 50vh;
+            border-radius: 10px;
+            background-color: $lightgrey;
+            flex: 0 0 auto;
+            margin-bottom: 5vh;
+            &:first-child{
+                margin-left: 19vw;
+            }
+            &:last-child{
+                margin-right: 19vw;
+            }
+            .testitext{
+                width: 55vw;
+                text-align: center;
+                padding-top: 10vh;
+            }
+            .person{
+                @include center-content;
+                height: 15vh;
+                width: 15vw;
+                padding-top: 10vh;
+                .people{
+                    object-fit: cover;
+                    border-radius: 50%;
+                    height: 4em;
+                    width: 4em;
+                }
+                .name{
+                    margin-left: 2vw;
+                    white-space: nowrap;
+                }
+            }
+        }
     }
 }
